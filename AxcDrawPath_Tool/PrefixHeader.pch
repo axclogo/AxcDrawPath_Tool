@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  xiezhi-iOS
+//
+//  Created by Axc on 2017/11/20.
+//  Copyright © 2017年 Axc. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+
+#ifdef __OBJC__
+
+//#define NSLog(FORMAT, ...) printf("[%s<%p>行号:%d]:%s\n",__FUNCTION__,self,__LINE__,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+
+// weak
+#define WeakSelf __weak typeof(self)weakSelf = self
+#define StrongSelf __strong typeof(weakSelf)self = weakSelf
+#define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
+// RGB颜色
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+#define rgb(r,g,b) RGBA(r,g,b,1.0f)
+#define rgba(r,g,b,a) RGBA(r,g,b,a)
+
+
+#define KScienceTechnologyBlue  RGB(59,185,222)
+#define kBackColor              RGB(9, 33, 62)
+#define kVCBackColor            RGB(28, 42, 60)
+#define kPicBackColor           RGB(0, 40, 90)
+
+// 三方框架组
+#import <Masonry.h>                     // 布局
+#import <UIImageView+WebCache.h>        // 网络图片加载
+#import <AFNetworking.h>                // 网络
+
+
+#endif /* TasksDynamicProgramming_pch */
