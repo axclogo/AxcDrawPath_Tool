@@ -37,8 +37,6 @@
 
 // 三方框架组
 #import <Masonry.h>                     // 布局
-#import <UIImageView+WebCache.h>        // 网络图片加载
-#import <AFNetworking.h>                // 网络
 
 
 #endif /* TasksDynamicProgramming_pch */

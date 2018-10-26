@@ -601,6 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5R4T3ZJXKR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AxcDrawPath_Tool/PrefixHeader.pch;
 				INFOPLIST_FILE = AxcDrawPath_Tool/Info.plist;
@@ -608,7 +609,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "AxcLogoCreate.AxcDrawPath-Tool";
+				PRODUCT_BUNDLE_IDENTIFIER = AxcLogoCreate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -620,6 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5R4T3ZJXKR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AxcDrawPath_Tool/PrefixHeader.pch;
 				INFOPLIST_FILE = AxcDrawPath_Tool/Info.plist;
@@ -627,7 +629,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "AxcLogoCreate.AxcDrawPath-Tool";
+				PRODUCT_BUNDLE_IDENTIFIER = AxcLogoCreate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
