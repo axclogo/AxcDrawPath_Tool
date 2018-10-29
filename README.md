@@ -22,6 +22,26 @@ AxcCAAnimation 是一部分动画的简易封装，这个对象做的不是很�
 
 IDE：Xcode 9.0 及以上版本 (由于适配iPhone X使用iOS11api，所以请使用Xcode 9.0及以上版本)
 
+
+### <a id="使用方法"></a>使用/安装
+
+* 第一种：手动  
+* 1.找到包含：</br>
+`AxcCAAnimation.h.m`、</br>
+`AxcDrawDefine.h`、</br>
+`AxcDrawPath.h.m`、</br>
+`AxcPolarAxis.h.m`、</br>
+`AxcDrawTools.h`</br>
+的`AxcAE_TabBar`文件夹;</br>
+* 2.直接把`AxcDrawPathPackage`文件夹拖入到您的工程中;
+* 3.导入 `"AxcDrawTools.h"`
+* 第二种：Cocoapods （后续将支持）
+* 1.在Podfile 中添加 `pod ''`
+* 2.执行 `pod setup`
+* 3.执行 `pod install` 或 `pod update`
+* 4.导入 `#import <>`
+
+
 ### <a id="功能介绍"></a>功能介绍
 - [x] 原生的贝塞尔支持
 - [x] 自定义Layer动画等
@@ -76,4 +96,249 @@ int width_ = width; int height_ = height;
 // 创建绘制动作路径
 UIBezierPath *bezierPath = [AxcDrawPath AxcDrawLineArray:points_1 // 绘制的点位
 clockwise:YES];       // 是否顺序绘制
+```
+
+## 刻度绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_2.gif)
+### 示例代码：
+```
+UIBezierPath *bezierPath = [AxcDrawPath AxcDrawScaleStartPoint:CGPointMake(20, 100)
+count:5        // 大刻度个数
+groupCount:10       // 组内个数
+bigScaleHeight:30       // 大刻度高度
+smallScaleHeight:20       // 小刻度高度
+spacing:5        // 刻度间距
+upward:NO       // 是否朝上
+sequence:YES];     // 顺序绘制
+```
+
+## 平行四边形绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_3.gif)
+### 示例代码：
+```
+UIBezierPath *bezierPath = [AxcDrawPath AxcDrawParallelogramRect:CGRectMake(10, 10,width, height)
+offset:CGPointMake(20, 0)
+clockwise:NO]
+```
+
+## 辐射圆绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_4.gif)
+### 示例代码：
+```
+UIBezierPath *bezierPath = [AxcDrawPath AxcDrawCircularRadiationCenter:CGPointMake(200, 200)    // 圆心
+radius:50                       // a半径
+lineHeights:arr                      // 每条线的长度
+outside:YES                      // 向外辐射？
+startAngle:-90                      // 起始角
+openingAngle:0                        // 开合角
+clockwise:YES];                    // 顺时针绘制？
+```
+
+## 开角辐射圆绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_5.gif)
+### 示例代码：
+```
+UIBezierPath *bezierPath = [AxcDrawPath AxcDrawCircularRadiationCenter:CGPointMake(200, 200)    // 圆心
+radius:50                       // a半径
+lineHeights:arr                      // 每条线的长度
+outside:YES                      // 向外辐射？
+startAngle:-90                      // 起始角
+openingAngle:90                        // 开合角
+clockwise:YES];                    // 顺时针绘制？
+```
+
+## 向内辐射圆绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_6.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawCircularRadiationCenter:arcCenter    // 圆心
+radius:arcRadius        // 半径
+lineHeights:lineHeights  // 每条线长度
+outside:NO]
+```
+
+## 内外辐射圆绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_7.gif)
+### 示例代码：
+```
+for (int i = 0; i < 80; i ++){
+CGFloat value = arc4random()%20 + 5;
+if (arc4random()%2) value = -value;
+[lineHeights addObject:@(value)];
+}
+[AxcDrawPath AxcDrawCircularRadiationCenter:arcCenter    // 圆心
+radius:arcRadius/2        // 半径
+lineHeights:lineHeights  // 每条线长度
+outside:YES]
+```
+
+## 递增开角辐射圆绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_8.gif)
+### 示例代码：
+```
+for (int i = 0; i < 50; i ++) [lineHeights addObject:@(i)];
+[AxcDrawPath AxcDrawCircularRadiationCenter:arcCenter    // 圆心
+radius:arcRadius/2        // 半径
+lineHeights:lineHeights  // 每条线长度
+outside:YES      // 向外绘制
+startAngle:-90      // d起始角
+openingAngle:90]
+```
+
+## 多圆弧绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_9.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawCircularArcCenter:arcCenter  // 中心
+radius:arcRadius                    // 半径
+count:5                      // 圆弧个数
+radian:30                     // 圆弧弧度
+startAngle:-90-15]
+```
+
+## 多圆弧首尾相连绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_10.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawCircularArcCenter:arcCenter  // 中心
+radius:arcRadius                    // 半径
+count:3                      // 圆弧个数
+radian:30                     // 圆弧弧度
+startAngle:-90-15
+openingAngle:0
+connection:YES]
+```
+
+## 圆周箭头绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_11.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawPointArrowCenter:arcCenter   // 圆心
+radius:arcRadius                     // 半径
+arrowRadius:10                      // 箭头高度/向心半径差
+arrowRadian:20                      // 箭头圆弧角度
+arrowCount:9]
+```
+
+## 圆周箭头绘制 - 箭头底部圆弧闭合
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_12.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawPointArrowCenter:arcCenter   // 圆心
+radius:arcRadius                     // 半径
+arrowRadius:10                      // 箭头高度/向心半径差
+arrowRadian:20                      // 箭头圆弧角度
+arrowCount:9                       // 箭头个数
+connections:YES                     // 是否形成闭合圆？
+arcConnections:YES                     // 是否使用圆弧作为连接边？
+outSide:NO                     // 箭头向外
+startAngle:-90-(20/2.f)            // 起始角
+openingAngle:0                       // 开合角
+clockwise:YES]
+```
+
+## 圆周箭头绘制 - 箭头底部圆弧闭合 - 箭头向外
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_13.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawPointArrowCenter:arcCenter   // 圆心
+radius:arcRadius                     // 半径
+arrowRadius:10                      // 箭头高度/向心半径差
+arrowRadian:20                      // 箭头圆弧角度
+arrowCount:6                       // 箭头个数
+connections:YES                     // 是否形成闭合圆？
+arcConnections:YES                     // 是否使用圆弧作为连接边？
+outSide:YES                     // 箭头向外
+startAngle:-90-(20/2.f)            // 起始角
+openingAngle:0                       // 开合角
+clockwise:YES]
+```
+
+## 圆周箭头绘制 - 箭头底部直线闭合 - 箭头向外
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_14.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawPointArrowCenter:arcCenter   // 圆心
+radius:arcRadius/2                     // 半径
+arrowRadius:10                      // 箭头高度/向心半径差
+arrowRadian:20                      // 箭头圆弧角度
+arrowCount:10                       // 箭头个数
+connections:YES                     // 是否形成闭合圆？
+arcConnections:NO                     // 是否使用圆弧作为连接边？
+outSide:YES                     // 箭头向外
+startAngle:-90-(20/2.f)            // 起始角
+openingAngle:0                       // 开合角
+clockwise:YES]
+```
+
+## 圆周箭头绘制 - 箭头底部直线闭合 - 箭头向内
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_15.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawPointArrowCenter:arcCenter   // 圆心
+radius:arcRadius                     // 半径
+arrowRadius:10                      // 箭头高度/向心半径差
+arrowRadian:20                      // 箭头圆弧角度
+arrowCount:10                       // 箭头个数
+connections:YES                     // 是否形成闭合圆？
+arcConnections:NO                     // 是否使用圆弧作为连接边？
+outSide:NO                     // 箭头向外
+startAngle:-90-(20/2.f)            // 起始角
+openingAngle:0                       // 开合角
+clockwise:YES]
+```
+
+## 圆周梯形绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_16.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawTrapezoidalBlockArcRingCenter:arcCenter  // 中心
+outsideRadius:arcRadius                    // 外圆半径
+blockRadius:10                     // 块半径
+blockCount:6                      // 块个数
+angleSpacing:10   // 间距角度
+startAngle:-115 ]
+```
+
+## 圆周块状圆弧绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_17.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawBlockArcRingCenter:arcCenter // 绘制中心
+outsideRadius:arcRadius                   // 外圆半径
+blockRadius:10                    // 环块距离外部距离
+blockCount:6                    // 环块个数
+angleSpacing:10                     // 环块间距弧度
+startAngle:185                   // 起始角弧度
+openingAngle:0]
+```
+
+## 圆周块状箭头绘制 - 逆时针
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_18.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawArrowBlockArcRingCenter:arcCenter    // 中心
+outsideRadius:arcRadius                  // 外圆半径
+blockRadius:20                   // 箭头半径
+blockCount:6                    // 块个数
+angleSpacing:10                   // 角度间距
+arrowAngle:10                   // 箭头相对伸出角度
+startAngle:-90                  // 起始角度
+openingAngle:0                    // 开合角度
+clockwise:NO]
+```
+
+## 圆周块状箭头绘制 - 顺时针
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_19.gif)
+### 示例代码：
+```
+[AxcDrawPath AxcDrawArrowBlockArcRingCenter:arcCenter    // 中心
+outsideRadius:arcRadius                  // 外圆半径
+blockRadius:20                   // 箭头半径
+blockCount:6                    // 块个数
+angleSpacing:10                   // 角度间距
+arrowAngle:10                   // 箭头相对伸出角度
+startAngle:-90                  // 起始角度
+openingAngle:0                    // 开合角度
+clockwise:YES]
 ```
