@@ -7,6 +7,8 @@
 ![CocoaPods](https://img.shields.io/badge/CocoaPods-1.5.2-brightgreen.svg)
 ![Axc](https://img.shields.io/badge/Axc-AEKit-orange.svg)
 
+![AxcAE_DrawPath](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_Header.png)<br>
+
 ### 简介：
 AxcDrawPath_Tool是一个快速贝塞尔曲线绘制工具，其中有现成的图案API可供直接调用，返回对象为 UIBezierPath 。<br><br>
 也是从AxcAEKit中拆分出来的一个组件，主要负责绘制计算。<br><br>
@@ -342,3 +344,7 @@ startAngle:-90                  // 起始角度
 openingAngle:0                    // 开合角度
 clockwise:YES]
 ```
+
+
+### 更新日志
+● 1.0.0:首发; </br>
