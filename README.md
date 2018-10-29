@@ -35,7 +35,7 @@ IDE：Xcode 9.0 及以上版本 (由于适配iPhone X使用iOS11api，所以请�
 `AxcDrawPath.h.m`、</br>
 `AxcPolarAxis.h.m`、</br>
 `AxcDrawTools.h`</br>
-的`AxcAE_TabBar`文件夹;</br>
+的`AxcDrawPathPackage`文件夹;</br>
 * 2.直接把`AxcDrawPathPackage`文件夹拖入到您的工程中;
 * 3.导入 `"AxcDrawTools.h"`
 * 第二种：Cocoapods （后续将支持）
