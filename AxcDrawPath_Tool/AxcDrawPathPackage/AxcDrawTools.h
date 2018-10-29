@@ -1,4 +1,4 @@
 
 #import "AxcDrawDefine.h"
-#import "AxcDrawPath/AxcDrawPath.h"
-#import "AxcCAAnimation/AxcCAAnimation.h"
+#import "AxcDrawPath.h"
+#import "AxcCAAnimation.h"
