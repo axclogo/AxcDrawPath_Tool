@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
     s.name         = "AxcDrawPath_Tool"
 
-    s.version      = "1.0.0"
+    s.version      = "1.0.1"
 
     s.summary      = "AxcAEKit系列拆分出来的一个贝塞尔曲线绘制工具，以科技风为主，动画为辅."
 

@@ -34,15 +34,15 @@ IDE：Xcode 9.0 及以上版本 (由于适配iPhone X使用iOS11api，所以请�
 `AxcDrawDefine.h`、</br>
 `AxcDrawPath.h.m`、</br>
 `AxcPolarAxis.h.m`、</br>
-`AxcDrawTools.h`</br>
+`AxcDrawPathTool.h`</br>
 的`AxcDrawPathPackage`文件夹;</br>
 * 2.直接把`AxcDrawPathPackage`文件夹拖入到您的工程中;
-* 3.导入 `"AxcDrawTools.h"`
-* 第二种：Cocoapods （后续将支持）
-* 1.在Podfile 中添加 `pod ''`
+* 3.导入 `"AxcDrawPathTool.h"`
+* 第二种：Cocoapods 
+* 1.在Podfile 中添加 `pod 'AxcDrawPath_Tool'`
 * 2.执行 `pod setup`
 * 3.执行 `pod install` 或 `pod update`
-* 4.导入 `#import <>`
+* 4.导入 `#import <AxcDrawPathTool.h>`
 
 
 ### <a id="功能介绍"></a>功能介绍
@@ -349,3 +349,4 @@ clockwise:YES]
 
 ### 更新日志
 ● 1.0.0:首发; </br>
+● 1.0.1:发布CocoaPods版本; </br>
