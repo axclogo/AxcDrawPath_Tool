@@ -12,6 +12,7 @@
 ### 简介：
 AxcDrawPath_Tool是一个快速贝塞尔曲线绘制工具，其中有现成的图案API可供直接调用，返回对象为 UIBezierPath 。<br><br>
 也是从AxcAEKit中拆分出来的一个组件，主要负责绘制计算。<br><br>
+AxcAE系列的组件都以科技风为主，动画为辅，在实际使用中并无太多价值，仅仅是因为爱好而制作的一套专攻科技风类型的工具组件；<br><br>
 
 ### AxcDrawPath_Tool对象说明
 
