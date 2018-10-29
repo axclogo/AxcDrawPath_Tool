@@ -38,8 +38,8 @@ IDE：Xcode 9.0 及以上版本 (由于适配iPhone X使用iOS11api，所以请�
 
 # AxcDrawPath示例部分预览
 ## 线段绘制
-![线段绘制](https://github.com/axclogo/AxcDrawPath_Tool/tree/master/sample_Img/sample_0)
-### 使用代码：
+![线段绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_0.gif)
+### 示例代码：
 ```
 // 先设置需要绘制的点位
 NSMutableArray *drawPoints = @[[NSValue valueWithCGPoint:CGPointMake(10, 10)],
@@ -60,3 +60,20 @@ UIBezierPath *bezierPath = [AxcDrawPath AxcDrawLineArray:drawPoints // 绘制的
 clockwise:YES];       // 是否顺序绘制
 ```
 
+## 折线绘制
+![绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/sample_1.gif)
+### 示例代码：
+```
+/// 线段2
+NSMutableArray *points_1 = @[].mutableCopy;
+for (int i = 0 ; i < 3; i ++) { // 折线个数
+for (int j = 0; j < 5 ; j ++) { // 折个数
+int width_ = width; int height_ = height;
+[points_1 addObject:[NSValue valueWithCGPoint:CGPointMake(arc4random()%width_ + 10, arc4random()%height_ + 10)]];
+}
+[points_1 addObject:[NSNull null]]; // 断点
+}
+// 创建绘制动作路径
+UIBezierPath *bezierPath = [AxcDrawPath AxcDrawLineArray:points_1 // 绘制的点位
+clockwise:YES];       // 是否顺序绘制
+```
