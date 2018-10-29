@@ -10,6 +10,7 @@
 		75D2B2A7696C43361E9458CA /* libPods-AxcDrawPath_Tool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFE6E305624627BE20F80D4 /* libPods-AxcDrawPath_Tool.a */; };
 		EA1930AC2182EB0400BF5045 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1930AB2182EB0400BF5045 /* ListModel.m */; };
 		EA66D2A92182F31D00F0421C /* CellDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66D2A82182F31D00F0421C /* CellDrawView.m */; };
+		EA891EA62186DF06008AFD21 /* AxcCustomDrawPath.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891EA52186DF06008AFD21 /* AxcCustomDrawPath.m */; };
 		EAF1B5052179B1A2002D3947 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF1B5042179B1A2002D3947 /* AppDelegate.m */; };
 		EAF1B5082179B1A2002D3947 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF1B5072179B1A2002D3947 /* ViewController.m */; };
 		EAF1B50B2179B1A2002D3947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF1B5092179B1A2002D3947 /* Main.storyboard */; };
@@ -49,6 +50,9 @@
 		EA1930AB2182EB0400BF5045 /* ListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 		EA66D2A72182F31D00F0421C /* CellDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellDrawView.h; sourceTree = "<group>"; };
 		EA66D2A82182F31D00F0421C /* CellDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellDrawView.m; sourceTree = "<group>"; };
+		EA891EA42186DF06008AFD21 /* AxcCustomDrawPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcCustomDrawPath.h; sourceTree = "<group>"; };
+		EA891EA52186DF06008AFD21 /* AxcCustomDrawPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AxcCustomDrawPath.m; sourceTree = "<group>"; };
+		EA891EA72186DF62008AFD21 /* AxcDrawPathTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcDrawPathTool.h; sourceTree = "<group>"; };
 		EAF1B5002179B1A2002D3947 /* AxcDrawPath_Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxcDrawPath_Tool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF1B5032179B1A2002D3947 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EAF1B5042179B1A2002D3947 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,7 +76,6 @@
 		EAF1B5552179BDEF002D3947 /* AxcPolarAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxcPolarAxis.m; sourceTree = "<group>"; };
 		EAF1B5562179BDEF002D3947 /* AxcDrawPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxcDrawPath.m; sourceTree = "<group>"; };
 		EAF1B5572179BDEF002D3947 /* AxcDrawPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxcDrawPath.h; sourceTree = "<group>"; };
-		EAF1B55B2179BE67002D3947 /* AxcDrawTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcDrawTools.h; sourceTree = "<group>"; };
 		EAF1B55E2179BF45002D3947 /* AxcDrawDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcDrawDefine.h; sourceTree = "<group>"; };
 		EAF1B5662179C5AA002D3947 /* MainCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
 		EAF1B5672179C5AA002D3947 /* MainCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
@@ -130,6 +133,15 @@
 				EA66D2A82182F31D00F0421C /* CellDrawView.m */,
 			);
 			path = DrawView;
+			sourceTree = "<group>";
+		};
+		EA891EA32186DEEB008AFD21 /* AxcCustomDrawPath */ = {
+			isa = PBXGroup;
+			children = (
+				EA891EA42186DF06008AFD21 /* AxcCustomDrawPath.h */,
+				EA891EA52186DF06008AFD21 /* AxcCustomDrawPath.m */,
+			);
+			path = AxcCustomDrawPath;
 			sourceTree = "<group>";
 		};
 		EAF1B4F72179B1A2002D3947 = {
@@ -211,10 +223,11 @@
 		EAF1B54D2179BDEF002D3947 /* AxcDrawPathPackage */ = {
 			isa = PBXGroup;
 			children = (
+				EA891EA32186DEEB008AFD21 /* AxcCustomDrawPath */,
 				EAF1B54E2179BDEF002D3947 /* AxcCAAnimation */,
 				EAF1B5522179BDEF002D3947 /* AxcDrawPath */,
-				EAF1B55B2179BE67002D3947 /* AxcDrawTools.h */,
 				EAF1B55E2179BF45002D3947 /* AxcDrawDefine.h */,
+				EA891EA72186DF62008AFD21 /* AxcDrawPathTool.h */,
 			);
 			path = AxcDrawPathPackage;
 			sourceTree = "<group>";
@@ -428,6 +441,7 @@
 				EAF1B5132179B1A3002D3947 /* main.m in Sources */,
 				EAF1B5692179C5AA002D3947 /* MainCollectionViewCell.m in Sources */,
 				EAF1B5592179BDEF002D3947 /* AxcPolarAxis.m in Sources */,
+				EA891EA62186DF06008AFD21 /* AxcCustomDrawPath.m in Sources */,
 				EAF1B5052179B1A2002D3947 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

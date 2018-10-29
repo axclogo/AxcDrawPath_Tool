@@ -7,6 +7,8 @@
 //
 
 #import "AxcPolarAxis.h"
+#import "AxcDrawDefine.h"
+#import "AxcCAAnimation.h"
 
 /**
  绘制动作路径
