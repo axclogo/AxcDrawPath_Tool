@@ -22,8 +22,7 @@ AxcCAAnimation 是一部分动画的简易封装，这个对象做的不是很�
 
 ### 框架支持
 最低支持：iOS 8.0 
-
-IDE：Xcode 9.0 及以上版本 (由于适配iPhone X使用iOS11api，所以请使用Xcode 9.0及以上版本)
+IDE：Xcode 10.0 及以上版本
 
 
 ### <a id="使用方法"></a>使用/安装
@@ -52,12 +51,19 @@ IDE：Xcode 9.0 及以上版本 (由于适配iPhone X使用iOS11api，所以请�
 - [x] 轻量级
 
 
-### 意见和定制
+# 成品绘制示例
+## AE瞄具类组件
+![瞄具绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/product.gif)
+## AE进度类组件
+![瞄具绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/product_1.gif)
+## 有了这个更多好玩酷炫的组件都可以自己绘制啦！
+
+
+## 意见和定制
 
 > 如果您在使用中有好的需求及建议，或者遇到什么bug，欢迎随时issue，我会及时的回复<br>
 > 另外，支持定制图案哦，谁有好看的图案可以联系我，issue/邮箱都可以。<br>
 > 每5个定制图案更新一个版本，并且我会在代码中注释该图案的提供者；支持侵删<br>
-
 
 # AxcDrawPath示例部分预览
 ## 线段绘制
