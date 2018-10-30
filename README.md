@@ -20,6 +20,8 @@ AxcDrawPath 是通过类方法，传入参数，进行计算点位，返回UIBez
 AxcPolarAxis 是一个极坐标转换对象，传入角度或弧度以及起始点和距离即可获得CGPoint坐标点；<br><br>
 AxcCAAnimation 是一部分动画的简易封装，这个对象做的不是很完善，但是基础动画够用；<br><br>
 
+### 喜欢的给个Star支持一下，O(∩_∩)O谢谢
+
 ### 框架支持
 最低支持：iOS 8.0 
 IDE：Xcode 10.0 及以上版本
