@@ -58,6 +58,8 @@ IDE：Xcode 10.0 及以上版本
 ![瞄具绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/product.gif)
 ## AE进度类组件
 ![瞄具绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/product_1.gif)
+## AE/网易鲸云音效y - 可视化圆形频谱组件
+![瞄具绘制](https://github.com/axclogo/AxcDrawPath_Tool/blob/master/sample_Img/product_2.gif)
 ## 有了这个更多好玩酷炫的组件都可以自己绘制啦！
 
 
