@@ -102,10 +102,10 @@ UICollectionViewDelegateFlowLayout
     CGFloat arcRadius = width/2 - 10;
     [self.dataListArray addObject:[ListModel title:@"圆内切多边形绘制"
                                           disTitle:@"绘制一个多边形，以外圆为交点，依次绘制该多边形形状，可以设置开放角和顶点的个数"
-                                              path:[AxcDrawPath AxcDrawParallelogramCenter:arcCenter    // 中心
+                                              path:[AxcDrawPath AxcDrawParallelogramCenter:arcCenter                // 中心
                                                                                 pointCount:6                        // 角个数
-                                                                                    radius:arcRadius                      // 每个顶点距离心的半径
-                                                                                startAngle:60                        // 起始绘制角（弧度）
+                                                                                    radius:arcRadius                // 每个顶点距离心的半径
+                                                                                startAngle:60                       // 起始绘制角（弧度）
                                                                               openingAngle:0                        // 开合角
                                                                                  clockwise:NO]]];
     /// 网格绘制 - 无边框
